@@ -1,0 +1,70 @@
+:root {
+  --color-base: #ffffff;      /* page background */
+  --color-ink: #1a1d21;       /* headings & body text */
+  --color-accent: #1f4e79;    /* buttons, links, CTAs (deep blue) */
+  --color-accent-dark: #163b5c;
+  --color-support: #5a6470;   /* secondary text, borders */
+  --color-soft: #f4f5f7;      /* alternating section backgrounds */
+
+  --max-width: 1120px;
+  --radius: 8px;
+  --shadow: 0 2px 12px rgba(26, 29, 33, 0.08);
+
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 18px;
+  color: var(--color-ink);
+  background: var(--color-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--color-accent-dark);
+}

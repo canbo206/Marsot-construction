@@ -1,0 +1,61 @@
+.hero {
+  background: var(--color-soft);
+  padding: 96px 0;
+}
+
+.hero__inner {
+  max-width: 760px;
+  text-align: center;
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.hero__title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero__subtitle {
+  font-size: 1.15rem;
+  color: var(--color-support);
+  margin-bottom: 32px;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero__phone {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.hero__phone:hover {
+  text-decoration: underline;
+}
+
+.hero__badge {
+  margin-top: 28px;
+  font-size: 0.85rem;
+  color: var(--color-support);
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 64px 0;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+}
