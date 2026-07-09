@@ -1,23 +1,24 @@
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 function Navbar() {
   return (
     <header className="navbar">
       <div className="container navbar__inner">
-        <a href="#home" className="navbar__logo">
+        <Link to="/" className="navbar__logo">
           Marsot<span>Construction</span>
-        </a>
+        </Link>
 
         <nav className="navbar__links">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/gallery">Gallery</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
 
-        <a href="#contact" className="btn navbar__cta">
+        <Link to="/contact" className="btn navbar__cta">
           Get a Free Estimate
-        </a>
+        </Link>
       </div>
     </header>
   )
