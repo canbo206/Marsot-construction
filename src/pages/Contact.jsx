@@ -2,7 +2,7 @@ import './Contact.css'
 
 function Contact() {
   return (
-    <section className="contact">
+    <section id="contact" className="contact page-section">
       <div className="container contact__inner">
         <div className="contact__info">
           <h2>Get a Free Estimate</h2>

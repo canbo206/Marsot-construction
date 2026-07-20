@@ -15,7 +15,7 @@
   color: var(--color-support);
 }
 
-.gallery__grid {
+.gallery__preview {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -41,16 +41,22 @@
   color: var(--color-support);
   font-weight: 500;
   font-size: 0.95rem;
+  text-align: center;
+  padding: 16px;
 }
 
-@media (max-width: 900px) {
-  .gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.gallery__see-all {
+  margin-top: 40px;
+  text-align: center;
 }
 
 @media (max-width: 560px) {
-  .gallery__grid {
-    grid-template-columns: 1fr;
+  .gallery__preview {
+    gap: 12px;
+  }
+
+  .gallery__placeholder {
+    font-size: 0.75rem;
+    padding: 8px;
   }
 }

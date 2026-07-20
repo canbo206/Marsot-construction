@@ -1,28 +1,44 @@
 .hero {
-  background: var(--color-soft);
+  position: relative;
+  background-color: var(--color-soft);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 96px 0;
+  overflow: hidden;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+  pointer-events: none;
 }
 
 .hero__inner {
+  position: relative;
+  z-index: 1;
   max-width: 760px;
   text-align: center;
 }
 
 .hero__eyebrow {
+  font-family: var(--font-body);
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--color-accent);
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-support);
   margin-bottom: 16px;
 }
 
 .hero__title {
-  font-size: 3rem;
+  font-size: 3.25rem;
   margin-bottom: 20px;
 }
 
 .hero__subtitle {
+  font-family: var(--font-body);
   font-size: 1.15rem;
   color: var(--color-support);
   margin-bottom: 32px;
@@ -32,30 +48,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.hero__phone {
-  font-weight: 600;
-  color: var(--color-accent);
-}
-
-.hero__phone:hover {
-  text-decoration: underline;
 }
 
 .hero__badge {
+  font-family: var(--font-body);
   margin-top: 28px;
   font-size: 0.85rem;
   color: var(--color-support);
+}
+
+/* Light text when a background photo is set */
+.hero--has-image .hero__eyebrow,
+.hero--has-image .hero__title,
+.hero--has-image .hero__subtitle,
+.hero--has-image .hero__badge {
+  color: #fff;
+}
+
+.hero--has-image .hero__subtitle,
+.hero--has-image .hero__badge {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero--has-image .btn {
+  background: #fff;
+  color: var(--color-ink);
+}
+
+.hero--has-image .btn:hover {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 @media (max-width: 720px) {
   .hero {
     padding: 64px 0;
   }
+
   .hero__title {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }

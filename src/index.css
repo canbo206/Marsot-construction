@@ -1,16 +1,20 @@
 :root {
-  --color-base: #ffffff;      /* page background */
-  --color-ink: #1a1d21;       /* headings & body text */
-  --color-accent: #1f4e79;    /* buttons, links, CTAs (deep blue) */
-  --color-accent-dark: #163b5c;
-  --color-support: #5a6470;   /* secondary text, borders */
-  --color-soft: #f4f5f7;      /* alternating section backgrounds */
+  --color-base: #ffffff;
+  --color-ink: #000000;
+  --color-accent: #000000;
+  --color-accent-dark: #333333;
+  --color-support: #666666;
+  --color-soft: #f5f5f5;
+  --color-border: #e5e5e5;
+
+  --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 
   --max-width: 1120px;
   --radius: 8px;
-  --shadow: 0 2px 12px rgba(26, 29, 33, 0.08);
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   color: var(--color-ink);
   background: var(--color-base);
@@ -40,6 +44,40 @@ body {
   min-height: 100vh;
 }
 
+/* Smooth scrolling + snap through each full-page section */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+/* Each main section fills the viewport and snaps into place while scrolling */
+.page-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Offset so the sticky navbar (72px) doesn't cover section headings */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+  }
+
+  .page-section {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+  }
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -50,10 +88,12 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3 {
-  line-height: 1.2;
-  font-weight: 700;
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+  font-weight: 600;
   color: var(--color-ink);
+  letter-spacing: -0.01em;
 }
 
 .container {
@@ -64,6 +104,7 @@ h1, h2, h3 {
 
 .btn {
   display: inline-block;
+  font-family: var(--font-body);
   background: var(--color-accent);
   color: #fff;
   padding: 14px 28px;
@@ -72,9 +113,20 @@ h1, h2, h3 {
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .btn:hover {
   background: var(--color-accent-dark);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+}
+
+.btn--secondary:hover {
+  background: var(--color-ink);
+  color: #fff;
 }

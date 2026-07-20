@@ -1,6 +1,6 @@
 .footer {
   background: var(--color-ink);
-  color: #c8ccd2;
+  color: #b3b3b3;
   margin-top: auto;
 }
 
@@ -12,16 +12,17 @@
 }
 
 .footer__logo {
-  font-size: 1.25rem;
-  font-weight: 800;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
   color: #fff;
   display: block;
   margin-bottom: 12px;
 }
 
 .footer__logo span {
-  color: #8fb0d4;
-  font-weight: 600;
+  color: #999;
+  font-weight: 500;
   margin-left: 4px;
 }
 
@@ -38,16 +39,17 @@
 }
 
 .footer__col h4 {
+  font-family: var(--font-body);
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   margin-bottom: 6px;
 }
 
 .footer__col a,
 .footer__col span {
-  color: #c8ccd2;
+  color: #b3b3b3;
   font-size: 0.9rem;
 }
 
@@ -56,10 +58,10 @@
 }
 
 .footer__bar {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding: 20px 0;
   font-size: 0.85rem;
-  color: #9aa0a8;
+  color: #808080;
 }
 
 @media (max-width: 720px) {

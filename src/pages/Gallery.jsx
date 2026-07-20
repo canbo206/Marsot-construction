@@ -1,21 +1,24 @@
+import { Link } from 'react-router-dom'
+import { galleryPhotos, galleryPreviewCount } from '../data/gallery'
 import './Gallery.css'
 
-// Replace these with real project photos later.
-// 1. Drop images into  src/assets/gallery/
-// 2. import photo1 from '../assets/gallery/photo1.jpg'
-// 3. Put { src: photo1, alt: '...' } objects in this array.
-const photos = [
-  { label: 'Interior repaint' },
-  { label: 'Exterior repaint' },
-  { label: 'Drywall install' },
-  { label: 'Kitchen refresh' },
-  { label: 'Trim & doors' },
-  { label: 'Ceiling repair' },
-]
+function GalleryPhoto({ photo }) {
+  return (
+    <div className="gallery__item">
+      {photo.src ? (
+        <img src={photo.src} alt={photo.alt ?? photo.label} />
+      ) : (
+        <span className="gallery__placeholder">{photo.label}</span>
+      )}
+    </div>
+  )
+}
 
 function Gallery() {
+  const previewPhotos = galleryPhotos.slice(0, galleryPreviewCount)
+
   return (
-    <section className="gallery">
+    <section id="gallery" className="gallery page-section">
       <div className="container">
         <h2 className="gallery__heading">Our Work</h2>
         <p className="gallery__intro">
@@ -23,16 +26,16 @@ function Gallery() {
           Snohomish County.
         </p>
 
-        <div className="gallery__grid">
-          {photos.map((photo) => (
-            <div className="gallery__item" key={photo.label}>
-              {photo.src ? (
-                <img src={photo.src} alt={photo.alt} />
-              ) : (
-                <span className="gallery__placeholder">{photo.label}</span>
-              )}
-            </div>
+        <div className="gallery__preview">
+          {previewPhotos.map((photo) => (
+            <GalleryPhoto photo={photo} key={photo.label} />
           ))}
+        </div>
+
+        <div className="gallery__see-all">
+          <Link to="/gallery" className="btn btn--secondary">
+            See All
+          </Link>
         </div>
       </div>
     </section>

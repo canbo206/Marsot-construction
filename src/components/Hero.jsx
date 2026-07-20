@@ -1,8 +1,25 @@
 import './Hero.css'
 
+// Drop your hero photo in src/assets/hero/, then uncomment the line below.
+// import heroBackground from '../assets/hero/hero-background.jpg'
+
+const heroBackground = null
+
 function Hero() {
+  const hasBackground = Boolean(heroBackground)
+
   return (
-    <section id="home" className="hero">
+    <section
+      id="home"
+      className={`hero page-section${hasBackground ? ' hero--has-image' : ''}`}
+      style={
+        hasBackground
+          ? { backgroundImage: `url(${heroBackground})` }
+          : undefined
+      }
+    >
+      {hasBackground && <div className="hero__overlay" aria-hidden="true" />}
+
       <div className="container hero__inner">
         <p className="hero__eyebrow">Painting &amp; Drywall · Greater Seattle</p>
 
@@ -17,9 +34,6 @@ function Hero() {
 
         <div className="hero__actions">
           <a href="#contact" className="btn">Get a Free Estimate</a>
-          <a href="tel:+14252690118" className="hero__phone">
-            Call (425) 269-0118
-          </a>
         </div>
 
         <p className="hero__badge">Licensed &amp; Insured</p>

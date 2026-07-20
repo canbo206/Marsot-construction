@@ -1,27 +1,10 @@
 import { Link } from 'react-router-dom'
+import { services } from '../data/services'
 import './Services.css'
-
-const services = [
-  {
-    title: 'Interior Painting Services',
-    description:
-      'Transform your space with our professional interior painting solutions tailored to your needs.',
-  },
-  {
-    title: 'Exterior Painting Services',
-    description:
-      "Enhance your home's curb appeal with our expert exterior painting services and durable finishes.",
-  },
-  {
-    title: 'Drywall Services',
-    description:
-      "At Marsot Construction, we deliver flawless drywall work from start to finish. Our team handles every stage—installation, taping, mudding, and repairs—with precision and consistency. Whether it's new construction or a small patch job, we ensure smooth, seamless surfaces that are perfectly prepped for paint and built to last.",
-  },
-]
 
 function Services() {
   return (
-    <section className="services">
+    <section id="services" className="services page-section">
       <div className="container">
         <h2 className="services__heading">Our Services Offered</h2>
         <p className="services__intro">
@@ -31,17 +14,32 @@ function Services() {
 
         <div className="services__grid">
           {services.map((service) => (
-            <div className="services__card" key={service.title}>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+            <div className="services__card" key={service.slug}>
+              <div className="services__card-image">
+                {service.cardImage ? (
+                  <img
+                    src={service.cardImage}
+                    alt={service.cardImageAlt ?? service.title}
+                  />
+                ) : (
+                  <span className="services__card-placeholder">
+                    {service.cardImageLabel}
+                  </span>
+                )}
+              </div>
+
+              <div className="services__card-body">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <Link
+                  to={`/services/${service.slug}`}
+                  className="btn btn--secondary services__learn-more"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           ))}
-        </div>
-
-        <div className="services__cta">
-          <Link to="/contact" className="btn">
-            Get a Free Estimate
-          </Link>
         </div>
       </div>
     </section>
