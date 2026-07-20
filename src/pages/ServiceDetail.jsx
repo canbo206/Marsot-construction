@@ -13,14 +13,24 @@ function ServiceDetail() {
   return (
     <article className="service-detail">
       <header className="service-detail__hero">
-        <div className="container">
-          <Link to="/#services" className="service-detail__back">
-            ← Back to Services
-          </Link>
-          <h1>{service.title}</h1>
-          <p className="service-detail__intro">{service.intro}</p>
-        </div>
-      </header>
+      <div className="container">
+        <Link to="/#services" className="service-detail__back">
+          ← Back to Services
+        </Link>
+        <h1>{service.title}</h1>
+        <p className="service-detail__intro">{service.intro}</p>
+        {service.includes && (
+          <ul className="service-detail__includes">
+            {service.includes.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        )}
+        {service.outro && (
+          <p className="service-detail__outro">{service.outro}</p>
+        )}
+      </div>
+    </header>
 
       <section className="service-detail__steps">
         <div className="container">
@@ -44,6 +54,8 @@ function ServiceDetail() {
           </div>
         </div>
       </section>
+
+      
 
       <section className="service-detail__photos">
         <div className="container">

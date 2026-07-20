@@ -1,9 +1,8 @@
 import './Hero.css'
 
 // Drop your hero photo in src/assets/hero/, then uncomment the line below.
-// import heroBackground from '../assets/hero/hero-background.jpg'
+import heroBackground from '../assets/hero/hero-background.jpg'
 
-const heroBackground = null
 
 function Hero() {
   const hasBackground = Boolean(heroBackground)
@@ -28,8 +27,8 @@ function Hero() {
         </h1>
 
         <p className="hero__subtitle">
-          A family-owned crew serving homeowners and contractors across King and
-          Snohomish County. We prep right, finish clean, and stand behind every job.
+        We prep right, finish clean, and stand behind every job 
+        — serving homeowners and contractors across the greater Seattle area.
         </p>
 
         <div className="hero__actions">

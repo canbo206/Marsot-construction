@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import './Navbar.css'
+import logo from '../assets/logo/logoSquare.png'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
@@ -13,7 +14,9 @@ function Navbar() {
       </Link>
 
       <Link to="/" className="navbar__logo" onClick={close}>
-        Marsot<span>Construction</span>
+        Marsot
+        <img src={logo} alt="Marsot Construction logo" className="navbar__logo-img" />
+        <span>Construction</span>
       </Link>
 
       <button

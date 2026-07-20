@@ -33,13 +33,13 @@
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--color-ink);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar__logo span {
-  color: var(--color-support);
-  font-weight: 500;
-  margin-left: 4px;
+  color: var(--color-ink);
 }
 
 .navbar__menu {
@@ -111,6 +111,13 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.navbar__logo-img {
+  height: 40px;
+  width: auto;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
 @media (max-width: 900px) {
   .navbar__left-link {
     padding-left: 16px;
@@ -120,6 +127,13 @@
   .navbar__logo {
     font-size: 1.1rem;
     padding: 0 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar__logo-img {
+    height: 34px;
   }
 
   .navbar__toggle {
@@ -163,6 +177,8 @@
     text-align: center;
   }
 }
+
+
 
 @media (max-width: 480px) {
   .navbar__left-link {
