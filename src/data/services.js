@@ -2,9 +2,11 @@
 // 1. Drop images into src/assets/services/<slug>/
 // 2. import photo1 from '../assets/services/interior-painting/photo1.jpg'
 // 3. Replace the placeholder object with { src: photo1, alt: 'Description' }
+// To push commit steps: 1. git add . 2. git commit -m"Added photo..." 3. git push
 import intpaint0 from '../assets/services/interior-painting/intpaint1.jpg'
 import intpaint1 from '../assets/services/interior-painting/intpaint1.jpeg'
 import intpaint2 from '../assets/services/interior-painting/intpaint2.jpg'
+import Yr26016 from '../assets/services/interior-painting/26016.jpeg'
 
 import drywall1 from '../assets/services/drywall/drywall1.jpg'
 import drywall2 from '../assets/services/drywall/drywall2.jpeg'
@@ -67,7 +69,7 @@ export const services = [
       { src: intpaint0, alt: 'Living room repaint' },
       { src: intpaint1, alt: 'Bedroom accent wall'},
       { src: intpaint2, alt: 'Trim & doors' },
-      { label: 'Ceiling refresh' },
+      { src: Yr26016, alt: '3055' },
     ],
   },
   {
@@ -114,10 +116,10 @@ export const services = [
       },
     ],
     photos: [
-      { label: 'Full exterior repaint' },
-      { label: 'Trim & fascia' },
-      { label: 'Front entry refresh' },
-      { label: 'Deck staining' },
+      { label: 'More to come...' },
+      { label: 'More to come...' },
+      { label: '' },
+      { label: '' },
     ],
   },
   {
@@ -167,7 +169,7 @@ export const services = [
       { src: drywall1, alt:  'New wall install' },
       { src: drywall2, alt:  'Ceiling repair' },
       { src: drywall3, alt:  'Texture match' },
-      { label: 'Patch & blend' },
+      { label: 'More to come...' },
     ],
   },
 ]

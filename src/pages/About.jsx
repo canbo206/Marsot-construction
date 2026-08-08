@@ -22,10 +22,9 @@ function About() {
           <div className="about__block">
             <h2>Who We Are</h2>
             <p>
-              We are a local crew built on craftsmanship, clear communication,
-              and respect for your home. Every project gets the same attention
-              whether it is a single room, a full exterior repaint, or drywall
-              from hang to finish.
+            We're a family-owned painting and drywall crew serving homeowners and 
+            general contractors across King and Snohomish County. What sets us apart: 
+            we handle both painting and drywall under one roof — no handoffs, no scheduling gaps, just clean, consistent work from start to finish. Licensed, insured, and built on referrals.
             </p>
           </div>
 
