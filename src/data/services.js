@@ -12,6 +12,8 @@ import drywall1 from '../assets/services/drywall/drywall1.jpg'
 import drywall2 from '../assets/services/drywall/drywall2.jpeg'
 import drywall3 from '../assets/services/drywall/attic.jpg'
 
+import Yr25job from '../assets/services/exterior-painting/Yr25job.jpeg'
+
 // To add a card image on the services page:
 // 1. Drop an image into src/assets/services/<slug>/ (e.g. card.jpg)
 // 2. import interiorCard from '../assets/services/interior-painting/card.jpg'
@@ -116,7 +118,7 @@ export const services = [
       },
     ],
     photos: [
-      { label: 'More to come...' },
+      { src: Yr25job, alt:'234'},
       { label: 'More to come...' },
       { label: '' },
       { label: '' },

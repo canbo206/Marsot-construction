@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import ServiceDetail from './pages/ServiceDetail'
 import GalleryPage from './pages/GalleryPage'
 import About from './pages/About'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
           </Routes>
         </main>
         <Footer />

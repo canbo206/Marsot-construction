@@ -36,6 +36,7 @@ function Navbar() {
         <nav className="navbar__links">
           <a href="/#services" onClick={close}>Services</a>
           <Link to="/gallery" onClick={close}>Gallery</Link>
+          <Link to="/blog" onClick={close}>Blog</Link>
           <a href="/#contact" onClick={close}>Contact</a>
         </nav>
 
