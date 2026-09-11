@@ -36,41 +36,40 @@ export const services = [
     cardImage: interiorCard,
     cardImageLabel: 'Interior painting',
     description:
-      "Marsot Construction handles interior repaints for homeowners across King and Snohomish County — walls, ceilings, trim, and cabinets, done with the same attention to prep and finish on every job.",
+      "We handle interior repaints for homeowners across King and Snohomish County. Walls, ceilings, trim, and cabinets, done with the same attention to prep and finish every time.",
     intro: "What's included:",
     includes: [
         'Interior walls and ceilings',
         'Trim, doors, and millwork',
         'Cabinet painting',
-        "Color and finish guidance if you're not sure where to start",
     ],
     outro:
-      "Every job starts with a walkthrough and a clear estimate, and follows the same process from there — see process below. Call or text us if you're planning a repaint.",
+      "Every job starts with a walkthrough and a written estimate. Call or text if you're planning a repaint.",
     steps: [
       {
         title: 'Walkthrough & Estimate',
         description:
-          "We take a look at the space in person and talk through what you're hoping to get out of the project. From there, we put together a clear estimate — so you know what you're working with before anything gets scheduled."
+          "We walk the space with you in person and talk through what you want out of the project. From there, we put together a clear, itemized estimate, so you know exactly what you're working with before anything gets scheduled."
       },
       {
         title: 'Scope & Scheduling',
         description:
-          "Once you're ready to move forward, we work out the details that matter for your job. Every project is a little different, so what gets nailed down here — and when — depends on what you actually need."
+          "Once you're ready to move forward, we lock in the scope and a schedule that works for your household. Every project is a little different, so the details we confirm here depend on what your job actually needs."
       },
       {
         title: 'Prep & Protection',
         description:
-         "Your home and furniture get protected, and surfaces are prepped properly before any paint goes on. It's not the most exciting part of the job, but it's the part that makes everything after it look right."
+         "Your home and furniture are protected and surfaces are properly prepped before any paint goes on. It's not the most visible part of the job, but it's what makes everything after it look right."
       },
       {
         title: 'The work',
         description:
-        "This is where the painting actually happens — done at the pace and with the process the job calls for, not rushed just to get it off the schedule."
+        "This is where the painting happens, at the pace the job calls for rather than rushed to clear the schedule."
       },
       {
         title: 'Final Walkthrough & Clean Finish',
         description:
-          "Before we call it done, we walk through the space with you and take care of anything that needs a second look. We clean up after ourselves too, so you're left with a finished room, not a mess."
+          "Before we call the job done, we walk the space with you and address anything that needs a second look. We clean up thoroughly, so you're left with a finished room, not a mess to deal with."
       },
     ],
     photos: [
@@ -86,7 +85,7 @@ export const services = [
     cardImage: null,
     cardImageLabel: 'Exterior painting',
     description:
-      "Marsot Construction handles exterior repaints built to hold up — siding, trim, and every exterior surface, prepped and painted to last through Pacific Northwest weather.",
+      "Marsot Construction handles exterior repaints for Pacific Northwest weather: siding, trim, and every exterior surface, properly prepped before any paint goes on.",
     intro: "What's included:",
     includes: [
         'Siding and exterior walls',
@@ -95,32 +94,32 @@ export const services = [
         "Scheduling that accounts for weather, not just the calendar",
     ],
     outro:
-      "Every job starts with a walkthrough and a clear estimate, and follows the same process from there — see process below. Reach out if you're planning to repaint the outside of your home.",
+      "Every job starts with a walkthrough and a written estimate. Reach out if you're planning to repaint the outside of your home.",
     steps: [
       {
         title: 'Walkthrough & Estimate',
         description:
-          "We take a look at the exterior in person, get a sense of the condition it's in, and put together a clear estimate based on what we actually see — not a guess from the street.",
+          "We inspect the exterior in person, assess the condition of the surfaces, and put together a clear estimate based on what we actually see, not a guess from the street.",
       },
       {
         title: 'Scope & Scheduling',
         description:
-          "We plan the work around the weather as much as your schedule, since exterior paint needs the right conditions to hold up. Timing can shift a bit depending on what the forecast does.",
+          "We plan the work around the weather as much as your schedule, since exterior paint needs the right conditions to hold up properly. Timing may shift depending on the forecast, and we'll keep you posted if it does.",
       },
       {
         title: 'Prep & Protection',
         description:
-         "Surfaces get properly prepared and your property gets protected before any painting begins.",
+         "Surfaces are properly prepared and your property is protected before any painting begins.",
       },
       {
         title: 'The Work',
         description:
-          "Paint goes on in whatever sequence and timing the job actually needs, adjusting along the way if conditions call for it.",
+          "Paint goes on in the sequence and timing the job calls for, and we adjust along the way if conditions require it.",
       },
       {
         title: 'Final Walkthrough & Clean Finish',
         description:
-          "We walk the property with you when it's done, take care of any touch-ups on the spot, and clean up the site before we head out.",
+          "We walk the property with you when the work is done, note anything that needs follow-up, and clean up the site before we head out.",
       },
     ],
     photos: [
@@ -136,41 +135,41 @@ export const services = [
     cardImage: drywallCard,
     cardImageLabel: 'Drywall work',
     description:
-      "Marsot Construction handles full drywall work — new installation, remodels, and repairs — with the same strong surface prep that carries into our painting work. It's a real advantage: the same crew handles the wall from framing to finish coat.",
+      "Marsot Construction handles full drywall work: new installation, remodels, and repairs, with the same surface prep that carries into our painting work. One crew handles the wall from framing to finish coat.",
     intro: "What's included:",
     includes: [
           'New drywall installation',
-          'Repairs — damage, patches, water or impact issues',
+          'Repairs: damage, patches, water or impact issues',
           'Taping, mudding, and texture matching',
           "Prep that sets up a clean paint job afterward",
       ],
     outro:
-      "Every job starts with a walkthrough and a clear estimate, and follows the same process from there — see process below. Contact us for drywall or painting work in the Seattle area.",
+      "Every job starts with a walkthrough and a written estimate. Contact us for drywall or painting work in the Seattle area.",
     steps: [
       {
         title: 'Walkthrough & Estimate',
         description:
-          "We take a look at the job in person — whether it's a new install, a repair, or something in between — and put together an estimate based on what's actually going on, not just what's visible on the surface.",
+          "We assess the job in person, whether it's a new install, a repair, or something in between, and put together an estimate based on what's actually going on, not just what's visible on the surface.",
       },
       {
         title: 'Scope & Scheduling',
         description:
-          "We talk through what the job involves and roughly when it'll happen, coordinating around your space or other trades if that's part of the picture.",
+          "We confirm what the job involves and roughly when it'll happen, coordinating around your space or other trades when that's part of the picture.",
       },
       {
         title: 'Prep & Protection',
         description:
-          "The work area and anything nearby get protected before material comes out or goes in.",
+          "The work area and anything nearby are protected before material comes out or goes in.",
       },
       {
         title: 'The Work',
         description:
-          "Drywall gets installed and finished using whatever process the job actually calls for — hung, taped, and matched so the repair blends in rather than stands out.",
+          "Drywall is installed and finished using the process the job calls for: hung, taped, and matched so a repair blends in rather than stands out.",
       },
       {
         title: 'Final Walkthrough & Clean Finish',
         description:
-          "We take a look at the finished wall together, make sure it's ready for the next step, and clean up before we go.",
+          "We review the finished wall together, confirm it's ready for the next step, and clean up before we go.",
       }
     ],
     photos: [
