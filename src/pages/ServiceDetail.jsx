@@ -66,8 +66,8 @@ function ServiceDetail() {
           </p>
 
           <div className="service-detail__photos-grid">
-            {service.photos.map((photo) => (
-              <div className="service-detail__photo" key={photo.label}>
+            {service.photos.map((photo, index) => (
+              <div className="service-detail__photo" key={photo.alt ?? `${photo.label}-${index}`}>
                 {photo.src ? (
                   <img src={photo.src} alt={photo.alt ?? photo.label} />
                 ) : (

@@ -32,8 +32,8 @@ function GalleryPage() {
       <section className="gallery-page__grid-wrap">
         <div className="container">
           <div className="gallery-page__grid">
-            {galleryPhotos.map((photo) => (
-              <GalleryPhoto photo={photo} key={photo.label} />
+            {galleryPhotos.map((photo, index) => (
+              <GalleryPhoto photo={photo} key={photo.alt ?? `${photo.label}-${index}`} />
             ))}
           </div>
         </div>

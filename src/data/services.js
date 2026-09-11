@@ -3,16 +3,20 @@
 // 2. import photo1 from '../assets/services/interior-painting/photo1.jpg'
 // 3. Replace the placeholder object with { src: photo1, alt: 'Description' }
 // To push commit steps: 1. git add . 2. git commit -m"Added photo..." 3. git push
-import intpaint0 from '../assets/services/interior-painting/intpaint1.jpg'
+// Note: these filenames must match the actual on-disk casing exactly
+// (Intpaint1.jpg, Attic.jpg) — Windows ignores case but a Linux build host
+// (e.g. Netlify/Vercel) won't, and a mismatched import would fail there.
+import intpaint0 from '../assets/services/interior-painting/Intpaint1.jpg'
 import intpaint1 from '../assets/services/interior-painting/intpaint1.jpeg'
 import intpaint2 from '../assets/services/interior-painting/intpaint2.jpg'
 import Yr26016 from '../assets/services/interior-painting/26016.jpeg'
 
 import drywall1 from '../assets/services/drywall/drywall1.jpg'
 import drywall2 from '../assets/services/drywall/drywall2.jpeg'
-import drywall3 from '../assets/services/drywall/attic.jpg'
+import drywall3 from '../assets/services/drywall/Attic.jpg'
 
 import Yr25job from '../assets/services/exterior-painting/Yr25job.jpeg'
+import extpaint1 from '../assets/services/exterior-painting/extpaint1.jpg'
 
 // To add a card image on the services page:
 // 1. Drop an image into src/assets/services/<slug>/ (e.g. card.jpg)
@@ -68,10 +72,10 @@ export const services = [
       },
     ],
     photos: [
-      { src: intpaint0, alt: 'Living room repaint' },
-      { src: intpaint1, alt: 'Bedroom accent wall'},
-      { src: intpaint2, alt: 'Trim & doors' },
-      { src: Yr26016, alt: '3055' },
+      { src: intpaint0, alt: 'Bedroom with painted closet doors and accent wall' },
+      { src: intpaint1, alt: 'Marsot painter spraying trim in a hallway' },
+      { src: intpaint2, alt: 'Two-tone accent wall and painted built-in closet' },
+      { src: Yr26016, alt: 'Kitchen and great room repaint' },
     ],
   },
   {
@@ -118,10 +122,10 @@ export const services = [
       },
     ],
     photos: [
-      { src: Yr25job, alt:'234'},
-      { label: 'More to come...' },
-      { label: '' },
-      { label: '' },
+      { src: Yr25job, alt: 'Exterior repaint, craftsman-style home' },
+      { src: extpaint1, alt: 'Exterior repaint, two-story home' },
+      { label: 'More exterior photos coming soon' },
+      { label: 'More exterior photos coming soon' },
     ],
   },
   {
@@ -168,10 +172,10 @@ export const services = [
       }
     ],
     photos: [
-      { src: drywall1, alt:  'New wall install' },
-      { src: drywall2, alt:  'Ceiling repair' },
-      { src: drywall3, alt:  'Texture match' },
-      { label: 'More to come...' },
+      { src: drywall1, alt: 'Marsot drywall crew finishing a ceiling repair' },
+      { src: drywall2, alt: 'Finished stairwell walls and trim, ready for paint' },
+      { src: drywall3, alt: 'New drywall installation in an attic room' },
+      { label: 'More drywall photos coming soon' },
     ],
   },
 ]
