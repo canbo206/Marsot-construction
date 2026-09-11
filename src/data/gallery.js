@@ -7,7 +7,10 @@
 // These photos are reused from the service pages (src/data/services.js) —
 // that's expected for a homepage "recent work" summary. Only real photos
 // are listed here; add more once there are more real jobs to show.
-import extpaint1 from '../assets/services/exterior-painting/extpaint1.jpg'
+// extpaint1.jpg was removed from assets/services/exterior-painting on
+// 2026-09-10 (replaced with new unconverted .heic photos) — see the note
+// left for Alvaro about converting those before adding a second exterior
+// gallery photo here.
 import Yr25job from '../assets/services/exterior-painting/Yr25job.jpeg'
 // Note: filenames must match the actual on-disk casing exactly
 // (Intpaint1.jpg, Attic.jpg) — see the same note in data/services.js.
@@ -20,7 +23,6 @@ import drywall2 from '../assets/services/drywall/drywall2.jpeg'
 import drywall1 from '../assets/services/drywall/drywall1.jpg'
 
 export const galleryPhotos = [
-  { src: extpaint1, alt: 'Exterior repaint, two-story home' },
   { src: Yr25job, alt: 'Exterior repaint, craftsman-style home' },
   { src: intpaint0, alt: 'Bedroom with painted closet doors and accent wall' },
   { src: intpaint2, alt: 'Two-tone accent wall and painted built-in closet' },

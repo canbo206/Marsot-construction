@@ -16,7 +16,9 @@ import drywall2 from '../assets/services/drywall/drywall2.jpeg'
 import drywall3 from '../assets/services/drywall/Attic.jpg'
 
 import Yr25job from '../assets/services/exterior-painting/Yr25job.jpeg'
-import extpaint1 from '../assets/services/exterior-painting/extpaint1.jpg'
+// extpaint1.jpg was removed from assets/services/exterior-painting on
+// 2026-09-10 (replaced with new unconverted .heic photos) — see the note
+// left for Alvaro about converting those before they can be wired in here.
 
 // To add a card image on the services page:
 // 1. Drop an image into src/assets/services/<slug>/ (e.g. card.jpg)
@@ -123,7 +125,7 @@ export const services = [
     ],
     photos: [
       { src: Yr25job, alt: 'Exterior repaint, craftsman-style home' },
-      { src: extpaint1, alt: 'Exterior repaint, two-story home' },
+      { label: 'More exterior photos coming soon' },
       { label: 'More exterior photos coming soon' },
       { label: 'More exterior photos coming soon' },
     ],

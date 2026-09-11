@@ -1,4 +1,5 @@
 import './Footer.css'
+import { LICENSE_NUMBER } from '../data/business'
 
 function Footer() {
   return (
@@ -10,7 +11,7 @@ function Footer() {
           </span>
           <p>
             Family-owned painting &amp; drywall serving King and Snohomish
-            County. Licensed &amp; Insured.
+            County. Licensed &amp; Insured · {LICENSE_NUMBER}
           </p>
         </div>
 
