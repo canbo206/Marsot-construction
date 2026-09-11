@@ -14,11 +14,14 @@ import Yr26016 from '../assets/services/interior-painting/26016.jpeg'
 import drywall1 from '../assets/services/drywall/drywall1.jpg'
 import drywall2 from '../assets/services/drywall/drywall2.jpeg'
 import drywall3 from '../assets/services/drywall/Attic.jpg'
+import drywall4 from '../assets/services/drywall/20260117_223118186_iOS.jpg'
+import drywall5 from '../assets/services/drywall/20260209_221602591_iOS.jpg'
+import drywall6 from '../assets/services/drywall/drywall-ceiling-finish.jpg'
+import drywall7 from '../assets/services/drywall/20260427_211118529_iOS.jpg'
 
 import Yr25job from '../assets/services/exterior-painting/Yr25job.jpeg'
-// extpaint1.jpg was removed from assets/services/exterior-painting on
-// 2026-09-10 (replaced with new unconverted .heic photos) — see the note
-// left for Alvaro about converting those before they can be wired in here.
+import extpaint2 from '../assets/services/exterior-painting/20260511_202509541_iOS.jpg'
+import extpaint3 from '../assets/services/exterior-painting/20260810_204325171_iOS.jpg'
 
 // To add a card image on the services page:
 // 1. Drop an image into src/assets/services/<slug>/ (e.g. card.jpg)
@@ -82,7 +85,7 @@ export const services = [
   {
     slug: 'exterior-painting',
     title: 'Exterior Painting Services',
-    cardImage: null,
+    cardImage: extpaint3,
     cardImageLabel: 'Exterior painting',
     description:
       "Marsot Construction handles exterior repaints for Pacific Northwest weather: siding, trim, and every exterior surface, properly prepped before any paint goes on.",
@@ -124,9 +127,8 @@ export const services = [
     ],
     photos: [
       { src: Yr25job, alt: 'Exterior repaint, craftsman-style home' },
-      { label: 'More exterior photos coming soon' },
-      { label: 'More exterior photos coming soon' },
-      { label: 'More exterior photos coming soon' },
+      { src: extpaint2, alt: 'Exterior repaint, two-story home' },
+      { src: extpaint3, alt: 'Exterior repaint, brick Tudor-style home with navy trim' },
     ],
   },
   {
@@ -176,7 +178,10 @@ export const services = [
       { src: drywall1, alt: 'Marsot drywall crew finishing a ceiling repair' },
       { src: drywall2, alt: 'Finished stairwell walls and trim, ready for paint' },
       { src: drywall3, alt: 'New drywall installation in an attic room' },
-      { label: 'More drywall photos coming soon' },
+      { src: drywall4, alt: 'New drywall installation, cathedral ceiling' },
+      { src: drywall5, alt: 'New drywall installation, curved stairwell before finish' },
+      { src: drywall6, alt: 'Marsot drywall crew finishing a ceiling seam' },
+      { src: drywall7, alt: 'Marsot drywall crew finishing a wall corner' },
     ],
   },
 ]
