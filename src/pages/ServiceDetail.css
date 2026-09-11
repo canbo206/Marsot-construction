@@ -1,6 +1,33 @@
 .service-detail__hero {
+  position: relative;
   padding: 48px 0 56px;
   background: var(--color-soft);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.service-detail__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+.service-detail__hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Light text when a hero photo is set (see .hero--has-image in Hero.css
+   for the same pattern used on the homepage). */
+.service-detail__hero--has-image h1,
+.service-detail__hero--has-image .service-detail__back,
+.service-detail__hero--has-image .service-detail__intro,
+.service-detail__hero--has-image .service-detail__includes,
+.service-detail__hero--has-image .service-detail__outro {
+  color: #fff;
 }
 
 .service-detail__back {

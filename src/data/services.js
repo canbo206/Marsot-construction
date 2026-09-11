@@ -38,6 +38,8 @@ export const services = [
     title: 'Interior Painting Services',
     cardImage: interiorCard,
     cardImageLabel: 'Interior painting',
+    heroImage: intpaint2,
+    heroImageAlt: 'Two-tone accent wall and painted built-in closet',
     description:
       "We handle interior repaints for homeowners across King and Snohomish County. Walls, ceilings, trim, and cabinets, done with the same attention to prep and finish every time.",
     intro: "What's included:",
@@ -87,6 +89,8 @@ export const services = [
     title: 'Exterior Painting Services',
     cardImage: extpaint3,
     cardImageLabel: 'Exterior painting',
+    heroImage: extpaint3,
+    heroImageAlt: 'Exterior repaint, brick Tudor-style home with navy trim',
     description:
       "Marsot Construction handles exterior repaints for Pacific Northwest weather: siding, trim, and every exterior surface, properly prepped before any paint goes on.",
     intro: "What's included:",
@@ -136,6 +140,10 @@ export const services = [
     title: 'Drywall (Install & Repair)',
     cardImage: drywallCard,
     cardImageLabel: 'Drywall work',
+    // Bare, unprimed board (not a finished paint job) so it's obvious at a
+    // glance that this page is about drywall, not painting — Alvaro's call.
+    heroImage: drywall5,
+    heroImageAlt: 'New drywall installation, curved stairwell before finish',
     description:
       "Marsot Construction handles full drywall work: new installation, remodels, and repairs, with the same surface prep that carries into our painting work. One crew handles the wall from framing to finish coat.",
     intro: "What's included:",
