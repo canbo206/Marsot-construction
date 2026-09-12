@@ -36,6 +36,9 @@ export const services = [
   {
     slug: 'interior-painting',
     title: 'Interior Painting Services',
+    seoTitle: 'Interior Painting Services | Marsot Construction',
+    seoDescription:
+      'Interior repaints for homeowners across King and Snohomish County: walls, ceilings, trim, and cabinets. Free estimates.',
     cardImage: interiorCard,
     cardImageLabel: 'Interior painting',
     heroImage: intpaint2,
@@ -87,6 +90,9 @@ export const services = [
   {
     slug: 'exterior-painting',
     title: 'Exterior Painting Services',
+    seoTitle: 'Exterior Painting Services | Marsot Construction',
+    seoDescription:
+      'Exterior repaints built for Pacific Northwest weather: siding, trim, and full surface prep. Serving King and Snohomish County.',
     cardImage: extpaint3,
     cardImageLabel: 'Exterior painting',
     heroImage: extpaint3,
@@ -138,6 +144,9 @@ export const services = [
   {
     slug: 'drywall',
     title: 'Drywall (Install & Repair)',
+    seoTitle: 'Drywall Installation & Repair | Marsot Construction',
+    seoDescription:
+      'Drywall installation, taping, mudding, and repair from the same crew that handles your painting. Serving King and Snohomish County.',
     cardImage: drywallCard,
     cardImageLabel: 'Drywall work',
     // Bare, unprimed board (not a finished paint job) so it's obvious at a

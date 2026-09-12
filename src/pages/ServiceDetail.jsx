@@ -1,5 +1,6 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { getServiceBySlug } from '../data/services'
+import Seo from '../components/Seo'
 import './ServiceDetail.css'
 
 function ServiceDetail() {
@@ -14,6 +15,12 @@ function ServiceDetail() {
 
   return (
     <article className="service-detail">
+      <Seo
+        title={service.seoTitle}
+        description={service.seoDescription}
+        path={`/services/${service.slug}`}
+        image={service.heroImage ?? service.cardImage}
+      />
       <header
         className={`service-detail__hero${hasHeroImage ? ' service-detail__hero--has-image' : ''}`}
         style={hasHeroImage ? { backgroundImage: `url(${service.heroImage})` } : undefined}

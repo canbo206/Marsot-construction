@@ -1,10 +1,18 @@
 import { Link } from 'react-router-dom'
 import './About.css'
 import { LICENSE_NUMBER } from '../data/business'
+import Seo from '../components/Seo'
+import heroBackground from '../assets/hero/hero-Background.jpg'
 
 function About() {
   return (
     <article className="about">
+      <Seo
+        title="About Marsot Construction | Family-Owned Painting & Drywall"
+        description="Marsot Construction is a family-owned painting and drywall crew serving King and Snohomish County. Licensed and insured, built on referrals."
+        path="/about"
+        image={heroBackground}
+      />
       <header className="about__hero">
         <div className="container">
           <Link to="/" className="about__back">

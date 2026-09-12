@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollManager from './components/ScrollManager'
+import BusinessSchema from './components/BusinessSchema'
 import Home from './pages/Home'
 import ServiceDetail from './pages/ServiceDetail'
 import GalleryPage from './pages/GalleryPage'
@@ -14,6 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollManager />
+      <BusinessSchema />
       <div className="app">
         <Navbar />
         <main>
