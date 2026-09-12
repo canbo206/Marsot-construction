@@ -1,10 +1,13 @@
 // Shared business facts referenced in more than one place, so each only
 // needs to be entered once. See Hero.jsx, About.jsx, and Footer.jsx.
 
-// Alvaro has not provided the real contractor license/UBI number yet.
-// Do not replace this with a guessed or invented number — leave the
-// placeholder until the real number is supplied.
-export const LICENSE_NUMBER = '[INSERT LICENSE / UBI NUMBER]'
+// Contractor license/UBI number. Empty on purpose: the real number hasn't
+// been supplied yet, and an empty value means the three places that display
+// it (Hero.jsx, About.jsx, Footer.jsx) fall back to just "Licensed &
+// Insured" rather than printing a placeholder on the live site.
+// Fill in the real number here and it appears in all three automatically.
+// Never put a guessed or invented number here.
+export const LICENSE_NUMBER = ''
 
 // The site currently lives at staging.marsotconstruction.com but the plan
 // (confirmed 2026-09-10) is to eventually move it to the bare domain — used

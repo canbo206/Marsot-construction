@@ -40,7 +40,7 @@ function Hero() {
         </div>
 
         <p className="hero__badge">
-          Licensed &amp; Insured · {LICENSE_NUMBER}
+          Licensed &amp; Insured{LICENSE_NUMBER && ` · ${LICENSE_NUMBER}`}
         </p>
       </div>
     </section>

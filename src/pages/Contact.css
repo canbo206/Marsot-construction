@@ -101,6 +101,26 @@
   resize: vertical;
 }
 
+/* Spam trap — must stay invisible to people but still be a real, fillable
+   field for bots, so this can't be `hidden` or `visibility: hidden`. */
+.contact__honey {
+  display: none;
+}
+
+.contact__form .btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Shown in place of the form after FormSubmit redirects back with ?sent=1. */
+.contact__sent {
+  background: var(--color-base);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  align-self: start;
+}
+
 .contact__form .btn {
   margin-top: 8px;
 }

@@ -11,7 +11,8 @@ function Footer() {
           </span>
           <p>
             Family-owned painting &amp; drywall serving King and Snohomish
-            County. Licensed &amp; Insured · {LICENSE_NUMBER}
+            County. Licensed &amp; Insured
+            {LICENSE_NUMBER && ` · ${LICENSE_NUMBER}`}
           </p>
         </div>
 

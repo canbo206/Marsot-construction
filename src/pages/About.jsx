@@ -53,9 +53,9 @@ function About() {
           <div className="about__block">
             <h2>Our Promise</h2>
             <p>
-              Licensed and insured ({LICENSE_NUMBER}). We tell you what to
-              expect and when to expect it, from the first walkthrough to the
-              last, and we don't leave a job half-finished.
+              Licensed and insured{LICENSE_NUMBER && ` (${LICENSE_NUMBER})`}.
+              We tell you what to expect and when to expect it, from the first
+              walkthrough to the last, and we don't leave a job half-finished.
             </p>
           </div>
         </div>
