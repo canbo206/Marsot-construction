@@ -96,6 +96,12 @@
   color: var(--color-ink);
 }
 
+/* Hidden on desktop, where "About Us" already sits in the header's left
+   column. Only appears in the dropdown once that link is hidden. */
+.navbar__menu-about {
+  display: none;
+}
+
 .navbar__cta {
   padding: 12px 22px;
   font-size: 0.95rem;
@@ -136,13 +142,30 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (max-width: 900px) {
+/* 1060px, not the usual ~900px: the full desktop header (About Us + centered
+   logo + phone + 3 nav links + CTA button) needs about 1040px before the
+   "Get a Free Estimate" button starts getting pushed past the right edge.
+   Collapsing to the hamburger a bit earlier avoids that squeezed state.
+   Measured, so don't lower this without re-checking around 1000px wide. */
+@media (max-width: 1060px) {
   .navbar {
     padding: 0 16px;
   }
 
+  /* Hidden rather than shrunk: the centered logo's text would otherwise
+     overflow its grid column and paint on top of the phone icon (~22px of
+     overlap at 375px wide). "About Us" moves into the dropdown instead
+     (.navbar__menu-about), so the page is still reachable. */
   .navbar__left-link {
-    font-size: 0.82rem;
+    display: none;
+  }
+
+  .navbar__menu-about {
+    display: block;
+  }
+
+  .navbar__right {
+    gap: 12px;
   }
 
   .navbar__logo {
@@ -205,8 +228,15 @@
   }
 }
 
+/* Small phones: the logo is the only flexible thing left in the header, so
+   it shrinks again here to stay clear of the phone icon and hamburger. */
 @media (max-width: 480px) {
-  .navbar__left-link {
-    font-size: 0.78rem;
+  .navbar__logo {
+    font-size: 1rem;
+  }
+
+  .navbar__logo-img {
+    height: 30px;
+    margin: 0 6px;
   }
 }

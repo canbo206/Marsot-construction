@@ -23,7 +23,7 @@ function Navbar() {
           collapses behind the hamburger on mobile — a visitor should never
           have to open the menu just to find a way to call. */}
       <div className="navbar__right">
-        {/* Full number on desktop; shrinks to just a call icon below 900px
+        {/* Full number on desktop; shrinks to just a call icon below 1060px
             (see Navbar.css) since there isn't room for the text next to the
             centered logo — the number itself is still in the aria-label. */}
         <a
@@ -50,6 +50,11 @@ function Navbar() {
 
         <div id="navbar-menu" className={`navbar__menu ${open ? 'is-open' : ''}`}>
           <nav className="navbar__links">
+            {/* Only shown once the standalone "About Us" link above is hidden
+                (below 1060px) so it never appears twice. */}
+            <Link to="/about" className="navbar__menu-about" onClick={close}>
+              About Us
+            </Link>
             <a href="/#services" onClick={close}>Services</a>
             <Link to="/gallery" onClick={close}>Gallery</Link>
             <a href="/#contact" onClick={close}>Contact</a>
