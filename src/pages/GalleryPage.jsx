@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { galleryPhotos } from '../data/gallery'
+import Seo from '../components/Seo'
 import './GalleryPage.css'
 
 function GalleryPhoto({ photo }) {
@@ -17,6 +18,12 @@ function GalleryPhoto({ photo }) {
 function GalleryPage() {
   return (
     <article className="gallery-page">
+      <Seo
+        title="Project Gallery | Marsot Construction"
+        description="Recent interior painting, exterior painting, and drywall projects across King and Snohomish County."
+        path="/gallery"
+        image={galleryPhotos[0]?.src}
+      />
       <header className="gallery-page__header">
         <div className="container">
           <Link to="/#gallery" className="gallery-page__back">
@@ -32,8 +39,8 @@ function GalleryPage() {
       <section className="gallery-page__grid-wrap">
         <div className="container">
           <div className="gallery-page__grid">
-            {galleryPhotos.map((photo) => (
-              <GalleryPhoto photo={photo} key={photo.label} />
+            {galleryPhotos.map((photo, index) => (
+              <GalleryPhoto photo={photo} key={photo.alt ?? `${photo.label}-${index}`} />
             ))}
           </div>
         </div>

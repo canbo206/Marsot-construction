@@ -8,8 +8,8 @@ function Services() {
       <div className="container">
         <h2 className="services__heading">Our Services Offered</h2>
         <p className="services__intro">
-          Specializing in painting and drywall installation, ensuring quality
-          and satisfaction for every project.
+          Interior and exterior painting, plus drywall installation and
+          repair. Same crew, start to finish.
         </p>
 
         <div className="services__grid">

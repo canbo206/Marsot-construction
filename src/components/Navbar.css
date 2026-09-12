@@ -1,23 +1,23 @@
+/* 3-column grid (left link | centered logo | right cluster) instead of the
+   old center-flex + absolute-positioned overlays. That older approach only
+   worked because every piece's width was tuned by hand; adding the phone
+   number broke it (the wider right side pushed into the logo). A grid lets
+   each column size to its own content with no hand-tuned offsets. */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 50;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
   height: 72px;
+  padding: 0 24px;
   background: var(--color-base);
   border-bottom: 1px solid var(--color-border);
 }
 
 .navbar__left-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  padding-left: 24px;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-ink);
@@ -35,22 +35,50 @@
   color: var(--color-ink);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-self: center;
 }
 
 .navbar__logo span {
   color: var(--color-ink);
 }
 
+.navbar__logo-img {
+  height: 40px;
+  width: auto;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+/* Wraps the phone link, hamburger toggle, and collapsible menu so the phone
+   number stays visible regardless of the menu's open/collapsed state. */
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar__phone {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.navbar__phone:hover {
+  color: var(--color-support);
+}
+
+.navbar__phone-icon {
+  display: none;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 .navbar__menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 72px;
   display: flex;
   align-items: center;
   gap: 36px;
-  padding-right: 24px;
 }
 
 .navbar__links {
@@ -68,6 +96,12 @@
   color: var(--color-ink);
 }
 
+/* Hidden on desktop, where "About Us" already sits in the header's left
+   column. Only appears in the dropdown once that link is hidden. */
+.navbar__menu-about {
+  display: none;
+}
+
 .navbar__cta {
   padding: 12px 22px;
   font-size: 0.95rem;
@@ -76,9 +110,6 @@
 
 .navbar__toggle {
   display: none;
-  position: absolute;
-  top: 14px;
-  right: 24px;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -111,37 +142,56 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-.navbar__logo-img {
-  height: 40px;
-  width: auto;
-  margin: 0 8px;
-  vertical-align: middle;
-}
+/* 1060px, not the usual ~900px: the full desktop header (About Us + centered
+   logo + phone + 3 nav links + CTA button) needs about 1040px before the
+   "Get a Free Estimate" button starts getting pushed past the right edge.
+   Collapsing to the hamburger a bit earlier avoids that squeezed state.
+   Measured, so don't lower this without re-checking around 1000px wide. */
+@media (max-width: 1060px) {
+  .navbar {
+    padding: 0 16px;
+  }
 
-@media (max-width: 900px) {
+  /* Hidden rather than shrunk: the centered logo's text would otherwise
+     overflow its grid column and paint on top of the phone icon (~22px of
+     overlap at 375px wide). "About Us" moves into the dropdown instead
+     (.navbar__menu-about), so the page is still reachable. */
   .navbar__left-link {
-    padding-left: 16px;
-    font-size: 0.82rem;
+    display: none;
+  }
+
+  .navbar__menu-about {
+    display: block;
+  }
+
+  .navbar__right {
+    gap: 12px;
   }
 
   .navbar__logo {
     font-size: 1.1rem;
-    padding: 0 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .navbar__logo-img {
     height: 34px;
   }
 
+  .navbar__phone-text {
+    display: none;
+  }
+
+  .navbar__phone-icon {
+    display: block;
+  }
+
   .navbar__toggle {
     display: flex;
   }
 
+  /* position: fixed (not absolute) so this dropdown spans the full viewport
+     width instead of just the width of its .navbar__right parent. */
   .navbar__menu {
-    position: absolute;
+    position: fixed;
     top: 72px;
     left: 0;
     right: 0;
@@ -178,11 +228,15 @@
   }
 }
 
-
-
+/* Small phones: the logo is the only flexible thing left in the header, so
+   it shrinks again here to stay clear of the phone icon and hamburger. */
 @media (max-width: 480px) {
-  .navbar__left-link {
-    font-size: 0.78rem;
-    padding-left: 12px;
+  .navbar__logo {
+    font-size: 1rem;
+  }
+
+  .navbar__logo-img {
+    height: 30px;
+    margin: 0 6px;
   }
 }

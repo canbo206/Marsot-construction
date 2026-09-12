@@ -46,6 +46,10 @@
 .contact__details a {
   color: var(--color-ink);
   font-weight: 500;
+  /* The email address is one long unbreakable string, which otherwise sets a
+     ~274px minimum width and makes the page scroll sideways on small phones.
+     "anywhere" (not "break-word") is what actually lets the minimum shrink. */
+  overflow-wrap: anywhere;
 }
 
 .contact__details a:hover {
@@ -95,6 +99,26 @@
 
 .contact__form textarea {
   resize: vertical;
+}
+
+/* Spam trap — must stay invisible to people but still be a real, fillable
+   field for bots, so this can't be `hidden` or `visibility: hidden`. */
+.contact__honey {
+  display: none;
+}
+
+.contact__form .btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Shown in place of the form after FormSubmit redirects back with ?sent=1. */
+.contact__sent {
+  background: var(--color-base);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  align-self: start;
 }
 
 .contact__form .btn {

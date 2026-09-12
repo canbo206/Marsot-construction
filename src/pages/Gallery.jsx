@@ -27,8 +27,8 @@ function Gallery() {
         </p>
 
         <div className="gallery__preview">
-          {previewPhotos.map((photo) => (
-            <GalleryPhoto photo={photo} key={photo.label} />
+          {previewPhotos.map((photo, index) => (
+            <GalleryPhoto photo={photo} key={photo.alt ?? `${photo.label}-${index}`} />
           ))}
         </div>
 

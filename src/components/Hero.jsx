@@ -1,7 +1,10 @@
 import './Hero.css'
+import { LICENSE_NUMBER } from '../data/business'
 
 // Drop your hero photo in src/assets/hero/, then uncomment the line below.
-import heroBackground from '../assets/hero/hero-background.jpg'
+// Note: filename casing must match the on-disk file exactly — see the same
+// note in data/services.js.
+import heroBackground from '../assets/hero/hero-Background.jpg'
 
 
 function Hero() {
@@ -23,19 +26,22 @@ function Hero() {
         <p className="hero__eyebrow">Painting &amp; Drywall · Greater Seattle</p>
 
         <h1 className="hero__title">
-          Expert Painting &amp; Drywall Services in Seattle
+          Painting &amp; Drywall Services in Seattle
         </h1>
 
         <p className="hero__subtitle">
-        We prep right, finish clean, and stand behind every job 
-        — serving homeowners and contractors across the greater Seattle area.
+          Straightforward painting and drywall work for homeowners and
+          contractors across the greater Seattle area. Proper prep, clean
+          execution, no surprises.
         </p>
 
         <div className="hero__actions">
           <a href="#contact" className="btn">Get a Free Estimate</a>
         </div>
 
-        <p className="hero__badge">Licensed &amp; Insured</p>
+        <p className="hero__badge">
+          Licensed &amp; Insured{LICENSE_NUMBER && ` · ${LICENSE_NUMBER}`}
+        </p>
       </div>
     </section>
   )

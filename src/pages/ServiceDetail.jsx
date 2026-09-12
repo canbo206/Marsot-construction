@@ -1,5 +1,6 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { getServiceBySlug } from '../data/services'
+import Seo from '../components/Seo'
 import './ServiceDetail.css'
 
 function ServiceDetail() {
@@ -10,27 +11,39 @@ function ServiceDetail() {
     return <Navigate to="/" replace />
   }
 
+  const hasHeroImage = Boolean(service.heroImage)
+
   return (
     <article className="service-detail">
-      <header className="service-detail__hero">
-      <div className="container">
-        <Link to="/#services" className="service-detail__back">
-          ← Back to Services
-        </Link>
-        <h1>{service.title}</h1>
-        <p className="service-detail__intro">{service.intro}</p>
-        {service.includes && (
-          <ul className="service-detail__includes">
-            {service.includes.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        )}
-        {service.outro && (
-          <p className="service-detail__outro">{service.outro}</p>
-        )}
-      </div>
-    </header>
+      <Seo
+        title={service.seoTitle}
+        description={service.seoDescription}
+        path={`/services/${service.slug}`}
+        image={service.heroImage ?? service.cardImage}
+      />
+      <header
+        className={`service-detail__hero${hasHeroImage ? ' service-detail__hero--has-image' : ''}`}
+        style={hasHeroImage ? { backgroundImage: `url(${service.heroImage})` } : undefined}
+      >
+        {hasHeroImage && <div className="service-detail__hero-overlay" aria-hidden="true" />}
+        <div className="container">
+          <Link to="/#services" className="service-detail__back">
+            ← Back to Services
+          </Link>
+          <h1>{service.title}</h1>
+          <p className="service-detail__intro">{service.intro}</p>
+          {service.includes && (
+            <ul className="service-detail__includes">
+              {service.includes.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          )}
+          {service.outro && (
+            <p className="service-detail__outro">{service.outro}</p>
+          )}
+        </div>
+      </header>
 
       <section className="service-detail__steps">
         <div className="container">
@@ -55,8 +68,6 @@ function ServiceDetail() {
         </div>
       </section>
 
-      
-
       <section className="service-detail__photos">
         <div className="container">
           <h2>Project Photos</h2>
@@ -66,8 +77,8 @@ function ServiceDetail() {
           </p>
 
           <div className="service-detail__photos-grid">
-            {service.photos.map((photo) => (
-              <div className="service-detail__photo" key={photo.label}>
+            {service.photos.map((photo, index) => (
+              <div className="service-detail__photo" key={photo.alt ?? `${photo.label}-${index}`}>
                 {photo.src ? (
                   <img src={photo.src} alt={photo.alt ?? photo.label} />
                 ) : (

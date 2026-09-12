@@ -2,17 +2,20 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollManager from './components/ScrollManager'
+import BusinessSchema from './components/BusinessSchema'
 import Home from './pages/Home'
 import ServiceDetail from './pages/ServiceDetail'
 import GalleryPage from './pages/GalleryPage'
 import About from './pages/About'
-import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'
+// Blog.jsx, BlogPost.jsx, and data/blog.js are intentionally kept but
+// unrouted — there's only one placeholder post so far. Re-add the routes
+// below (and the Blog link in Navbar.jsx) once there's a real posting habit.
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollManager />
+      <BusinessSchema />
       <div className="app">
         <Navbar />
         <main>
@@ -21,8 +24,6 @@ function App() {
             <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
           </Routes>
         </main>
         <Footer />

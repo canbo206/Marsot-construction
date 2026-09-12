@@ -1,9 +1,18 @@
 import { Link } from 'react-router-dom'
 import './About.css'
+import { LICENSE_NUMBER } from '../data/business'
+import Seo from '../components/Seo'
+import heroBackground from '../assets/hero/hero-Background.jpg'
 
 function About() {
   return (
     <article className="about">
+      <Seo
+        title="About Marsot Construction | Family-Owned Painting & Drywall"
+        description="Marsot Construction is a family-owned painting and drywall crew serving King and Snohomish County. Licensed and insured, built on referrals."
+        path="/about"
+        image={heroBackground}
+      />
       <header className="about__hero">
         <div className="container">
           <Link to="/" className="about__back">
@@ -22,9 +31,12 @@ function About() {
           <div className="about__block">
             <h2>Who We Are</h2>
             <p>
-            We're a family-owned painting and drywall crew serving homeowners and 
-            general contractors across King and Snohomish County. What sets us apart: 
-            we handle both painting and drywall under one roof — no handoffs, no scheduling gaps, just clean, consistent work from start to finish. Licensed, insured, and built on referrals.
+              We're a family-owned painting and drywall crew serving homeowners
+              and general contractors across King and Snohomish County. What
+              sets us apart: one crew handles both the painting and the
+              drywall. No handoffs between trades, no gaps in the schedule
+              waiting on someone else to show up. Licensed and insured, and
+              most of our work still comes from people who've used us before.
             </p>
           </div>
 
@@ -41,9 +53,9 @@ function About() {
           <div className="about__block">
             <h2>Our Promise</h2>
             <p>
-              Licensed and insured, we stand behind our work and treat every
-              home like our own. From the first walkthrough to the final
-              walkthrough, you will know what to expect and when to expect it.
+              Licensed and insured{LICENSE_NUMBER && ` (${LICENSE_NUMBER})`}.
+              We tell you what to expect and when to expect it, from the first
+              walkthrough to the last, and we don't leave a job half-finished.
             </p>
           </div>
         </div>

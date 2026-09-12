@@ -1,0 +1,5 @@
+# Allow all crawlers on everything.
+User-agent: *
+Allow: /
+
+Sitemap: https://marsotconstruction.com/sitemap.xml
