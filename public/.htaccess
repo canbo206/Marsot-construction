@@ -13,6 +13,18 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # --- Redirects from the old Hostinger Website Builder site ---------------
+  # marsotconstruction.com used to run a page-builder site whose URLs don't
+  # match this one. These 301s keep old bookmarks, business cards, and any
+  # search results from landing on a 404. /gallery needs no rule — the path
+  # happens to be identical on both sites.
+  # These MUST stay above the SPA fallback below, or the fallback swallows
+  # them and the redirect never fires.
+  # NE (noescape) is required: without it Apache turns the "#" into "%23"
+  # and the anchor breaks.
+  RewriteRule ^interior-painting-exterior-painting-drywall-services/?$ /#services [R=301,NE,L]
+  RewriteRule ^seattle-painting-drywall-contractor-contact/?$ /#contact [R=301,NE,L]
+
   # Leave real files and folders alone (assets, favicon, robots.txt...).
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
