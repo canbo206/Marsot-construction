@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import './About.css'
 import { LICENSE_NUMBER } from '../data/business'
 import Seo from '../components/Seo'
-import heroBackground from '../assets/hero/hero-Background.jpg'
+import heroBackground from '../assets/hero/hero-Background.webp'
 
 function About() {
   return (

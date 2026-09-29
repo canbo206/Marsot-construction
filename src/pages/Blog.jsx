@@ -16,7 +16,7 @@ function Blog() {
             <Link to={`/blog/${post.slug}`} className="blog__card" key={post.slug}>
               <div className="blog__card-image">
                 {post.cardImage ? (
-                  <img src={post.cardImage} alt={post.cardImageAlt ?? post.title} />
+                  <img src={post.cardImage} alt={post.cardImageAlt ?? post.title} loading="lazy" decoding="async" />
                 ) : (
                   <span className="blog__card-placeholder">
                     {post.cardImageLabel}

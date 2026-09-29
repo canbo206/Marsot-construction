@@ -4,7 +4,7 @@ import { LICENSE_NUMBER } from '../data/business'
 // Drop your hero photo in src/assets/hero/, then uncomment the line below.
 // Note: filename casing must match the on-disk file exactly — see the same
 // note in data/services.js.
-import heroBackground from '../assets/hero/hero-Background.jpg'
+import heroBackground from '../assets/hero/hero-Background.webp'
 
 
 function Hero() {

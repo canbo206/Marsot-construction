@@ -1,36 +1,36 @@
 // To add project photos for a service:
 // 1. Drop images into src/assets/services/<slug>/
-// 2. import photo1 from '../assets/services/interior-painting/photo1.jpg'
+// 2. import photo1 from '../assets/services/interior-painting/photo1.webp'
 // 3. Replace the placeholder object with { src: photo1, alt: 'Description' }
 // To push commit steps: 1. git add . 2. git commit -m"Added photo..." 3. git push
 // Note: these filenames must match the actual on-disk casing exactly
 // (Intpaint1.jpg, Attic.jpg) — Windows ignores case but a Linux build host
 // (e.g. Netlify/Vercel) won't, and a mismatched import would fail there.
-import intpaint0 from '../assets/services/interior-painting/Intpaint1.jpg'
-import intpaint1 from '../assets/services/interior-painting/intpaint1.jpeg'
-import intpaint2 from '../assets/services/interior-painting/intpaint2.jpg'
-import Yr26016 from '../assets/services/interior-painting/26016.jpeg'
+import intpaint0 from '../assets/services/interior-painting/intpaint-bedroom.webp'
+import intpaint1 from '../assets/services/interior-painting/intpaint-hallway.webp'
+import intpaint2 from '../assets/services/interior-painting/intpaint2.webp'
+import Yr26016 from '../assets/services/interior-painting/26016.webp'
 
-import drywall1 from '../assets/services/drywall/drywall1.jpg'
-import drywall2 from '../assets/services/drywall/drywall2.jpeg'
-import drywall3 from '../assets/services/drywall/Attic.jpg'
-import drywall4 from '../assets/services/drywall/20260117_223118186_iOS.jpg'
-import drywall5 from '../assets/services/drywall/20260209_221602591_iOS.jpg'
-import drywall6 from '../assets/services/drywall/drywall-ceiling-finish.jpg'
-import drywall7 from '../assets/services/drywall/20260427_211118529_iOS.jpg'
+import drywall1 from '../assets/services/drywall/drywall1.webp'
+import drywall2 from '../assets/services/drywall/drywall2.webp'
+import drywall3 from '../assets/services/drywall/Attic.webp'
+import drywall4 from '../assets/services/drywall/20260117_223118186_iOS.webp'
+import drywall5 from '../assets/services/drywall/20260209_221602591_iOS.webp'
+import drywall6 from '../assets/services/drywall/drywall-ceiling-finish.webp'
+import drywall7 from '../assets/services/drywall/20260427_211118529_iOS.webp'
 
-import Yr25job from '../assets/services/exterior-painting/Yr25job.jpeg'
-import extpaint2 from '../assets/services/exterior-painting/20260511_202509541_iOS.jpg'
-import extpaint3 from '../assets/services/exterior-painting/20260810_204325171_iOS.jpg'
+import Yr25job from '../assets/services/exterior-painting/Yr25job.webp'
+import extpaint2 from '../assets/services/exterior-painting/20260511_202509541_iOS.webp'
+import extpaint3 from '../assets/services/exterior-painting/20260810_204325171_iOS.webp'
 
 // To add a card image on the services page:
 // 1. Drop an image into src/assets/services/<slug>/ (e.g. card.jpg)
-// 2. import interiorCard from '../assets/services/interior-painting/card.jpg'
+// 2. import interiorCard from '../assets/services/interior-painting/card.webp'
 // 3. Set cardImage: interiorCard on that service below
 
-import interiorCard from '../assets/services/interior-painting/intpaintCard.jpg'
-// import exteriorCard from '../assets/services/interior-painting/intpaintCard.jpg'
-import drywallCard from '../assets/services/drywall/drywallCard.jpg'
+import interiorCard from '../assets/services/interior-painting/intpaintCard.webp'
+// import exteriorCard from '../assets/services/interior-painting/intpaintCard.webp'
+import drywallCard from '../assets/services/drywall/drywallCard.webp'
 
 export const services = [
   {

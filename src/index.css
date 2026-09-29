@@ -44,6 +44,14 @@ body {
   min-height: 100vh;
 }
 
+/* Clears the fixed MobileCallBar so it can't sit on top of the last line
+   of the footer. Keep in step with that bar's height if it changes. */
+@media (max-width: 720px) {
+  .app {
+    padding-bottom: 56px;
+  }
+}
+
 /* Smooth scrolling + snap through each full-page section */
 html {
   scroll-behavior: smooth;

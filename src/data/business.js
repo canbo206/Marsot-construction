@@ -33,3 +33,14 @@ export const BUSINESS_HOURS_SCHEMA = {
 // No street address anywhere on the site — see the Areas We Serve section
 // of the dev handoff doc for why (deliberate decision, not an omission).
 export const SERVICE_AREAS = ['King County, WA', 'Snohomish County, WA']
+
+// Google Analytics 4 measurement ID, e.g. 'G-XXXXXXXXXX'. Empty means no
+// analytics script loads at all, which is why localhost and staging don't
+// pollute the numbers. Create the property at analytics.google.com, then
+// paste the ID here — see Analytics.jsx.
+export const GA_MEASUREMENT_ID = ''
+
+// Google Search Console verification is NOT here on purpose — it lives in
+// index.html. Google checks the raw HTML when verifying, and this site is
+// client-rendered, so a tag injected by React may not be visible to it.
+// See the placeholder comment in index.html.

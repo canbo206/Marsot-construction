@@ -80,7 +80,7 @@ function ServiceDetail() {
             {service.photos.map((photo, index) => (
               <div className="service-detail__photo" key={photo.alt ?? `${photo.label}-${index}`}>
                 {photo.src ? (
-                  <img src={photo.src} alt={photo.alt ?? photo.label} />
+                  <img src={photo.src} alt={photo.alt ?? photo.label} loading="lazy" decoding="async" />
                 ) : (
                   <span className="service-detail__photo-placeholder">
                     {photo.label}

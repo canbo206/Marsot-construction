@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import './Navbar.css'
-import logo from '../assets/logo/logoSquare.png'
+import logo from '../assets/logo/logoSquare.webp'
 
 function Navbar() {
   const [open, setOpen] = useState(false)

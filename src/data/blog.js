@@ -1,6 +1,6 @@
 // To add a blog post:
 // 1. (Optional) Drop a cover image into src/assets/blog/
-// 2. import cover1 from '../assets/blog/cover1.jpg'
+// 2. import cover1 from '../assets/blog/cover1.webp'
 // 3. Add a new object to blogPosts below with a unique slug
 //
 // post.content renders top to bottom, in order. Supported blocks:

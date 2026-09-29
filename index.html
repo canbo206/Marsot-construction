@@ -12,6 +12,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--
+      Google Search Console verification goes here, not in React. Google
+      reads the raw HTML when verifying and this site is client-rendered,
+      so a tag React injects may not be seen. In Search Console pick the
+      "HTML tag" method and paste the whole tag on the line below:
+
+      <meta name="google-site-verification" content="..." />
+
+      Search Console is the more useful half of the analytics pair — it
+      reports the actual searches that surface this site, which is what
+      tells you whether the SEO work is landing.
+    -->
+
+    <!--
       Fallback title only. Per-page titles, descriptions, canonical links,
       and Open Graph tags are set at runtime by src/components/Seo.jsx —
       don't add a <meta name="description"> here too, or every page ends up

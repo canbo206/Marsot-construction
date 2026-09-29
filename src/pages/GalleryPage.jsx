@@ -7,7 +7,7 @@ function GalleryPhoto({ photo }) {
   return (
     <div className="gallery-page__item">
       {photo.src ? (
-        <img src={photo.src} alt={photo.alt ?? photo.label} />
+        <img src={photo.src} alt={photo.alt ?? photo.label} loading="lazy" decoding="async" />
       ) : (
         <span className="gallery-page__placeholder">{photo.label}</span>
       )}

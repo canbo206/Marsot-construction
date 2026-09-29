@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import Services from './Services'
 import Gallery from './Gallery'
 import Contact from './Contact'
-import heroBackground from '../assets/hero/hero-Background.jpg'
+import heroBackground from '../assets/hero/hero-Background.webp'
 
 function Home() {
   return (

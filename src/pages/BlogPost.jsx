@@ -20,7 +20,7 @@ function BlogPostContent({ block, index }) {
     case 'image':
       return (
         <div className="blog-post__image" key={index}>
-          <img src={block.src} alt={block.alt ?? ''} />
+          <img src={block.src} alt={block.alt ?? ''} loading="lazy" decoding="async" />
         </div>
       )
     case 'instagram':
@@ -52,7 +52,7 @@ function BlogPost() {
 
       {post.cardImage && (
         <div className="container blog-post__cover">
-          <img src={post.cardImage} alt={post.cardImageAlt ?? post.title} />
+          <img src={post.cardImage} alt={post.cardImageAlt ?? post.title} loading="lazy" decoding="async" />
         </div>
       )}
 

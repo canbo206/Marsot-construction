@@ -20,6 +20,8 @@ function Services() {
                   <img
                     src={service.cardImage}
                     alt={service.cardImageAlt ?? service.title}
+                    loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <span className="services__card-placeholder">
