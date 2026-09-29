@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Deploy bundle built for Hostinger uploads
+marsot-site.zip
