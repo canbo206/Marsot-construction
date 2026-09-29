@@ -30,9 +30,9 @@ function Hero() {
         </h1>
 
         <p className="hero__subtitle">
-          Straightforward painting and drywall work for homeowners and
-          contractors across the greater Seattle area. Proper prep, clean
-          execution, no surprises.
+          Straightforward painting and drywall work for homeowners,
+          contractors, and commercial properties across the greater Seattle
+          area. Proper prep, clean execution, no surprises.
         </p>
 
         <div className="hero__actions">

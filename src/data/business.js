@@ -19,6 +19,17 @@ export const BUSINESS_NAME = 'Marsot Construction'
 export const BUSINESS_PHONE = '+14252690118'
 export const BUSINESS_PHONE_DISPLAY = '(425) 269-0118'
 export const BUSINESS_EMAIL = 'marsotconstruction@gmail.com'
+
+// Office hours. Keep the display string and the schema.org version below in
+// sync, and matching Google Business Profile — inconsistent hours across
+// sources is a known local-search negative.
+export const BUSINESS_HOURS_DISPLAY = 'Mon-Fri, 9am-5pm'
+export const BUSINESS_HOURS_SCHEMA = {
+  '@type': 'OpeningHoursSpecification',
+  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+  opens: '09:00',
+  closes: '17:00',
+}
 // No street address anywhere on the site — see the Areas We Serve section
 // of the dev handoff doc for why (deliberate decision, not an omission).
 export const SERVICE_AREAS = ['King County, WA', 'Snohomish County, WA']

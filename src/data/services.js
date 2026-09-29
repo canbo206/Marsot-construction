@@ -38,18 +38,19 @@ export const services = [
     title: 'Interior Painting Services',
     seoTitle: 'Interior Painting Services | Marsot Construction',
     seoDescription:
-      'Interior repaints for homeowners across King and Snohomish County: walls, ceilings, trim, and cabinets. Free estimates.',
+      'Interior repaints for homes and commercial spaces across King and Snohomish County: walls, ceilings, trim, cabinets, and wood staining. Free estimates.',
     cardImage: interiorCard,
     cardImageLabel: 'Interior painting',
     heroImage: intpaint2,
     heroImageAlt: 'Two-tone accent wall and painted built-in closet',
     description:
-      "We handle interior repaints for homeowners across King and Snohomish County. Walls, ceilings, trim, and cabinets, done with the same attention to prep and finish every time.",
+      "We handle interior repaints for homeowners and commercial properties across King and Snohomish County. Walls, ceilings, trim, and cabinets, done with the same attention to prep and finish every time.",
     intro: "What's included:",
     includes: [
         'Interior walls and ceilings',
         'Trim, doors, and millwork',
         'Cabinet painting',
+        'Staining for interior wood surfaces',
     ],
     outro:
       "Every job starts with a walkthrough and a written estimate. Call or text if you're planning a repaint.",
@@ -92,17 +93,18 @@ export const services = [
     title: 'Exterior Painting Services',
     seoTitle: 'Exterior Painting Services | Marsot Construction',
     seoDescription:
-      'Exterior repaints built for Pacific Northwest weather: siding, trim, and full surface prep. Serving King and Snohomish County.',
+      'Exterior repaints plus deck and siding staining, built for Pacific Northwest weather. Full surface prep. Serving King and Snohomish County.',
     cardImage: extpaint3,
     cardImageLabel: 'Exterior painting',
     heroImage: extpaint3,
     heroImageAlt: 'Exterior repaint, brick Tudor-style home with navy trim',
     description:
-      "Marsot Construction handles exterior repaints for Pacific Northwest weather: siding, trim, and every exterior surface, properly prepped before any paint goes on.",
+      "Marsot Construction handles exterior repaints and staining for Pacific Northwest weather: siding, trim, decks, and fences, properly prepped before any paint or stain goes on.",
     intro: "What's included:",
     includes: [
         'Siding and exterior walls',
         'Trim, fascia, and exterior details',
+        'Deck, fence, and siding staining',
         'Full surface prep before any paint goes on',
         "Scheduling that accounts for weather, not just the calendar",
     ],

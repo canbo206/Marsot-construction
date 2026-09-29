@@ -4,6 +4,7 @@ import {
   BUSINESS_PHONE,
   BUSINESS_EMAIL,
   SERVICE_AREAS,
+  BUSINESS_HOURS_SCHEMA,
 } from '../data/business'
 
 // Site-wide schema.org data (rendered once, always present — see App.jsx).
@@ -11,7 +12,12 @@ import {
 // painting and drywall under one entity; "HousePainter" alone would not.
 // No street address on purpose — see the Areas We Serve note in the dev
 // handoff doc on why the business never states where it's physically based.
-const SERVICE_TYPES = ['Interior Painting', 'Exterior Painting', 'Drywall']
+const SERVICE_TYPES = [
+  'Interior Painting',
+  'Exterior Painting',
+  'Drywall',
+  'Deck and Siding Staining',
+]
 
 const schema = {
   '@context': 'https://schema.org',
@@ -21,6 +27,7 @@ const schema = {
   email: BUSINESS_EMAIL,
   url: SITE_URL,
   areaServed: SERVICE_AREAS,
+  openingHoursSpecification: [BUSINESS_HOURS_SCHEMA],
   makesOffer: SERVICE_TYPES.map((serviceType) => ({
     '@type': 'Offer',
     itemOffered: {

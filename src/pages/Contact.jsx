@@ -6,6 +6,7 @@ import {
   BUSINESS_PHONE,
   BUSINESS_PHONE_DISPLAY,
   BUSINESS_EMAIL,
+  BUSINESS_HOURS_DISPLAY,
 } from '../data/business'
 
 function Contact() {
@@ -40,6 +41,10 @@ function Contact() {
             <li>
               <span className="contact__label">Service Area</span>
               <span>King &amp; Snohomish County, WA</span>
+            </li>
+            <li>
+              <span className="contact__label">Hours</span>
+              <span>{BUSINESS_HOURS_DISPLAY}</span>
             </li>
           </ul>
 

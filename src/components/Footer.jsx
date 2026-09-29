@@ -1,5 +1,5 @@
 import './Footer.css'
-import { LICENSE_NUMBER } from '../data/business'
+import { LICENSE_NUMBER, BUSINESS_HOURS_DISPLAY } from '../data/business'
 
 function Footer() {
   return (
@@ -32,6 +32,7 @@ function Footer() {
             marsotconstruction@gmail.com
           </a>
           <span>King &amp; Snohomish County, WA</span>
+          <span>{BUSINESS_HOURS_DISPLAY}</span>
         </div>
       </div>
 
